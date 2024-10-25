@@ -75,7 +75,7 @@ Starts receiving data in interrupt mode.
 
 ### `void UART_RX_SetCallback(myUART_HandleTypeDef *uart_handle, void (*callback)(myUART_HandleTypeDef *uart_handle, uint8_t data))`
 
-Sets a callback function for received data. Return 1 in this function mean the input will be discarded.
+Sets a callback function for received data. Must return 0 to accept current character.
 
 - **Parameters:**
   - `uart_handle`: Pointer to the `myUART_HandleTypeDef` structure.
